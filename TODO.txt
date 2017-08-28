@@ -1,4 +1,3 @@
-+] [Foxitive] Aggiungere una directory statica per il tema
 +] [Foxitive] Commentare il codice
 +] [Samuele] Aggiungere il testo per quando non ci sono post
 +] [Samuele] Sostituire la slider con il Carousel di Bootstrap

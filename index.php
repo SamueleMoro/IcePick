@@ -1,3 +1,6 @@
+<?php
+    $icepickDir = get_template_directory();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -136,7 +139,7 @@
         
         //Set a default image if the post doesn't have any images
         if(empty($first_img)){ 
-            $first_img = "/wordpress/wp-content/themes/IcePick/images/default.jpg";
+            $first_img = $icepickDir."/images/default.jpg";
         }
         return $first_img;
     }
