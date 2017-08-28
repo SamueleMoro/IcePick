@@ -56,7 +56,7 @@ header:hover { border-color:#cfcfcf; }
 /* Slider */
 
 #slider { width:100%; height:500px; float:left; margin-bottom:2em; }
-#slider .image-slider { height:100%; background-image:url(../images/slide1.jpg); background-size:cover; background-position:center center; background-repeat:no-repeat; }
+#slider .image-slider { height:100%; background-image:url(/wordpress/wp-content/themes/IcePick/images/slide1.jpg); background-size:cover; background-position:center center; background-repeat:no-repeat; }
 
 
 /* Post */

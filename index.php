@@ -13,7 +13,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     </head>
     <body>
         <div class="container-fluid">
@@ -61,88 +61,40 @@
                         <h1>Last post</h1>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
-                            <div class="img-post">
-                                <div class="overlay-thumb">
-                                    <div class="overlay-text">
-                                        <div class="overlay-text-table">
-                                            <p class="subtext">Around the world</p>
-                                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <img src="images/post.jpg" alt="San Francisco">
-                            </div>
-                            <div class="bottom-box">
-                                <h4>Lorem ipsum dolor sit amet</h4>
-                                <p class="date">10 Gen 2012</p>
-                                <p class="categ">Information Tecnology</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mi enim, accumsan rutrum varius id, mollis hendrerit dolor. Vestibulum commodo erat vel diam porta, sed sollicitudin sem aliquam.</p>
-                                <div class="post-ins-buttons">
-                                    <a href=""><i class="fa fa-heart-o"></i></a>
-                                    <a href=""><i class="fa fa-comment-o"></i></a>
-                                    <a href=""><i class="fa fa-bullhorn"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        $allPosts = [];
+                        $nColumns = 3;
+                        
+                        
+                        while(have_posts()) {
+                            the_post();
+                            
+                            array_push($allPosts, $post);
+                        }
+                        ?>
+                        
+                        <?php
+                            for($i = 0; $i < count($allPosts); $i+=($nColumns-1))
+                            {
+                                include "thumbnail.php";
+                            }
+                        ?>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
-                            <div class="img-post">
-                                <div class="overlay-thumb">
-                                    <div class="overlay-text">
-                                        <div class="overlay-text-table">
-                                            <p class="subtext">Around the world</p>
-                                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <img src="images/post.jpg" alt="San Francisco">
-                            </div>
-                            <div class="bottom-box">
-                                <h4>Lorem ipsum dolor sit amet</h4>
-                                <p class="date">10 Gen 2012</p>
-                                <p class="categ">Information Tecnology</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mi enim, accumsan rutrum varius id, mollis hendrerit dolor. Vestibulum commodo erat vel diam porta, sed sollicitudin sem aliquam.</p>
-                                <div class="post-ins-buttons">
-                                    <a href=""><i class="fa fa-heart-o"></i></a>
-                                    <a href=""><i class="fa fa-comment-o"></i></a>
-                                    <a href=""><i class="fa fa-bullhorn"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                            for($i = 1; $i < count($allPosts); $i+=($nColumns-1))
+                            {
+                                include "thumbnail.php";
+                            }
+                        ?>
                     </div>
                     <div class="col-sm-4">
-                        <div class="thumbnail">
-                            <div class="img-post">
-                                <div class="overlay-thumb">
-                                    <div class="overlay-text">
-                                        <div class="overlay-text-table">
-                                            <p class="subtext">Around the world</p>
-                                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <img src="images/post.jpg" alt="San Francisco">
-                            </div>
-                            <div class="bottom-box">
-                                <h4>Lorem ipsum dolor sit amet</h4>
-                                <p class="date">10 Gen 2012</p>
-                                <p class="categ">Information Tecnology</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mi enim, accumsan rutrum varius id, mollis hendrerit dolor. Vestibulum commodo erat vel diam porta, sed sollicitudin sem aliquam.</p>
-                                <div class="post-ins-buttons">
-                                    <a href=""><i class="fa fa-heart-o"></i></a>
-                                    <a href=""><i class="fa fa-comment-o"></i></a>
-                                    <a href=""><i class="fa fa-bullhorn"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                            for($i = 2; $i < count($allPosts); $i+=($nColumns-1))
+                            {
+                                include "thumbnail.php";
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -167,3 +119,20 @@
         -->
     </body>
 </html>
+
+<?php
+    //Functions
+    function post_thumbnail($post) {
+        $first_img = '';
+        ob_start();
+        ob_end_clean();
+        $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+        $first_img = $matches [1] [0];
+        
+        //Set a default image if the post doesn't have any images
+        if(empty($first_img)){ 
+            $first_img = "/wordpress/wp-content/themes/IcePick/images/default.jpg";
+        }
+        return $first_img;
+    }
+?>

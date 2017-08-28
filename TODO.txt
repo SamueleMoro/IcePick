@@ -1,0 +1,8 @@
++] [Foxitive] Aggiungere una directory statica per il tema
++] [Foxitive] Commentare il codice
++] [Samuele] Aggiungere il testo per quando non ci sono post
++] [Samuele] Sostituire la slider con il Carousel di Bootstrap
++] [Foxitive] Creare il logo per IcePick
++] [Foxitive] Aggiungere il codice php per la pagina dei post
++] [Foxitive] Spostare le funzioni in fondo a index.php in functions.php
++] [Samuele] Aggiungere un link in thumbnail.php(che sia sull'immagine o sul titolo) che porti a "#"(sarà poi cambiato dinamicamente con php in modo che porti alla versione completa del post).
