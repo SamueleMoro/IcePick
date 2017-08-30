@@ -5,4 +5,6 @@
 +] [Foxitive] Spostare le funzioni in fondo a index.php in functions.php
 +] [Samuele] Aggiungere un link in thumbnail.php(che sia sull'immagine o sul titolo) che porti a "#"(sarà poi cambiato dinamicamente con php in modo che porti alla versione completa del post).
 +] Test
-+] ciao 
++] [Samuele] Aggiungere un div About me con all'interno immagine del proprietario e una descrizione (width:100% ?)
++] [Samuele] Aggiungere i tooltip alle icone (Es. Social in fondo alla pagina)
++] [Samuele] Aggiungere un menu secondario, colonna destra o sinistra, per una migliore navigazione
