@@ -10,15 +10,19 @@
                 </div>
             </div>
         </div>
-        <img src="<?php echo post_thumbnail($allPosts[$i]); ?>" alt="San Francisco">
+        <a href="#">
+            <img src="<?php echo post_thumbnail($allPosts[$i]); ?>" alt="San Francisco">
+        </a>
     </div>
     <div class="bottom-box">
-        <h4><?php echo $allPosts[$i]->post_title; ?></h4>
+        <a href="#">
+            <h4><?php echo $allPosts[$i]->post_title; ?></h4>
+        </a>
         <p class="date"><?php echo get_the_date("j F Y",$allPosts[$i]->ID); ?></p>
         <p class="categ"><?php echo get_the_category($allPosts[$i]->ID)[0]->name; ?></p>
         <p><?php
             $content = get_the_content($allPosts[$i]->ID);
-            $content = preg_replace("/<img[^>]+\>/i", " ", $content);          
+            $content = preg_replace("/<img[^>]+\>/i", " ", $content);
             $content = apply_filters('the_content', $content);
             $content = str_replace(']]>', ']]>', $content);
 
