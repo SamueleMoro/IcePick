@@ -30,10 +30,6 @@ header:hover { border-color:#cfcfcf; }
 .menu-link li a:hover,
 .menu-link li a.active { color:#E91E63; }
 
-/*
-.menu-hide { color:#444; margin:14px 16px 0 16px; padding:10px; float:left; font-size:14px; transition:.2s; -ms-transition:.2s; }
-.menu-hide:hover { color:#E91E63; }
-*/
 
 #menuRight { width:auto; height:36px; float:right; margin:17px 30px; }
 .input-group .form-control { width:160px; height:35px; font-style:italic; line-height:36px; border:1px solid #eaeaea; background:#fff; border-right:0; color:#444; transition:.3s ease-in-out; -ms-transition:.3s ease-in-out; }
