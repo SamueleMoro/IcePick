@@ -4,4 +4,4 @@
 +] [Foxitive] Aggiungere il codice php per la pagina dei post
 +] [Foxitive] Spostare le funzioni in fondo a index.php in functions.php
 +] [Samuele] Aggiungere un link in thumbnail.php(che sia sull'immagine o sul titolo) che porti a "#"(sarà poi cambiato dinamicamente con php in modo che porti alla versione completa del post).
-+] Test Atom by Foxitive
++] Prova Github
