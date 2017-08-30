@@ -78,7 +78,7 @@
                         
                         <?php
                             //Posts in column 1
-                            for($i = 0; $i < count($allPosts); $i+=($nColumns-1))
+                            for($i = 0; $i < count($allPosts); $i+=$nColumns)
                             {
                                 include "thumbnail.php";
                             }
@@ -87,7 +87,7 @@
                     <div class="col-sm-4">
                         <?php
                             //Posts in column 2
-                            for($i = 1; $i < count($allPosts); $i+=($nColumns-1))
+                            for($i = 1; $i < count($allPosts); $i+=$nColumns)
                             {
                                 include "thumbnail.php";
                             }
@@ -96,7 +96,7 @@
                     <div class="col-sm-4">
                         <?php
                             //Posts in column 3
-                            for($i = 2; $i < count($allPosts); $i+=($nColumns-1))
+                            for($i = 2; $i < count($allPosts); $i+=$nColumns)
                             {
                                 include "thumbnail.php";
                             }
