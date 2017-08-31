@@ -21,10 +21,12 @@
         <p class="date"><?php echo get_the_date("j F Y",$allPosts[$i]->ID); ?></p>
         <p class="categ"><?php echo get_the_category($allPosts[$i]->ID)[0]->name; ?></p>
         <p><?php
-            $content = get_the_content($allPosts[$i]->ID);
+            $content = $allPosts[$i]->post_content;
             $content = preg_replace("/<img[^>]+\>/i", " ", $content);
             $content = apply_filters('the_content', $content);
             $content = str_replace(']]>', ']]>', $content);
+
+            $content = substr($content,0,220)."...";
 
             echo $content;
         ?>
