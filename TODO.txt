@@ -1,6 +1,0 @@
-+] [Samuele] Aggiungere il testo per quando non ci sono post
-+] [Samuele] Sostituire la slider con il Carousel di Bootstrap
-+] [Foxitive] Creare il logo per IcePick
-+] [Foxitive] Aggiungere il codice php per la pagina dei post
-+] [Foxitive] Spostare le funzioni in fondo a index.php in functions.php
-+] [Samuele] Aggiungere un sostituto se non viene caricata un'immagine nell'articolo (Immagine alternativa)
