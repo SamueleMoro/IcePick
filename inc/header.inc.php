@@ -3,12 +3,12 @@
         <div id="wrapper">
             <div id="menuLeft">
                 <ul class="menu-link">
-                    <li><a href="#" class="active"><i class="fa fa-building-o " aria-hidden="true"></i>Home</a></li>
-                    <li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i>Categories</a></li>
-                    <li><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Posts</a></li>
-                    <li><a href="#"><i class="fa fa-desktop " aria-hidden="true"></i>Layouts</a></li>
-                    <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i>About me</a></li>
-                    <li><a href="#"><i class="fa fa-envelope-open-o" aria-hidden="true"></i>Contacts</a></li>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Posts</a></li>
+                    <li><a href="#">Layouts</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Contacts</a></li>
                 </ul>
             </div>
             <div id="menuRight">
