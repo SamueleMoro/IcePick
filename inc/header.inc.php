@@ -1,18 +1,8 @@
 <header>
     <div id="menuPrincipale">
-        <div id="wrapper">
+        <div class="container">
             <div id="menuLeft">
-                <ul class="menu-link">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">Posts</a></li>
-                    <li><a href="#">Layouts</a></li>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </div>
-            <div id="menuRight">
-                <form>
+                <form action="" method="post">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search...">
                         <div class="input-group-btn">
@@ -22,6 +12,16 @@
                         </div>
                     </div>
                 </form>
+            </div>
+            <div id="menuRight">
+                <ul class="menu-link">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Posts</a></li>
+                    <li><a href="#">Layouts</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
             </div>
         </div>
     </div>
