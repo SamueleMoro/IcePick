@@ -7,13 +7,15 @@
     <body>
         <div class="container-fluid">
             <?php require_once 'inc/header.inc.php'; ?>
-            <div class="container">
+            <div class="container page-container">
                 <div class="row">
+                    <!--
                     <div class="col-sm-12">
                         <div id="logoWeb">
                             <a href="./">Ice Pick</a>
                         </div>
                     </div>
+                    -->
                     <div class="col-sm-12">
                         <div id="slider">
                             <div class="image-slider"></div>
