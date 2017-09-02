@@ -2,6 +2,7 @@
     <div id="menuPrincipale">
         <div class="container">
             <div id="menuLeft">
+                <!--
                 <form action="" method="post">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search...">
@@ -12,6 +13,7 @@
                         </div>
                     </div>
                 </form>
+                -->
             </div>
             <div id="menuRight">
                 <ul class="menu-link">
