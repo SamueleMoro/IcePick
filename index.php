@@ -1,6 +1,3 @@
-<?php
-    $icepickDir = get_template_directory();
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -139,7 +136,7 @@
         
         //Set a default image if the post doesn't have any images
         if(empty($first_img)){ 
-            $first_img = $icepickDir."/images/default.jpg";
+            $first_img = get_template_directory_uri()."/images/default.jpg";
         }
         return $first_img;
     }
