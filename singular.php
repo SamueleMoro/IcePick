@@ -47,7 +47,28 @@
             </header>
             <div class="container">
                 <div class="row">
+                    <?php 
+                        #ignora
+                        the_post();
                     
+                        $titolo = $post->post_title; 
+                    
+                        #!!Il contenuto possiede codice HTML!!#
+                        $contenuto = apply_filters('the_content', $post->post_content);
+                    
+                        $data = $post->post_date;
+                    
+                        $author = get_the_author();
+                    
+                        #Lo metto come array perché un post può avere più categorie
+                        $categoria = [get_the_category($allPosts[$i]->ID)[0]->name];
+                    
+                    echo $titolo."<br>";
+                    echo $contenuto."<br>";
+                    echo $data."<br>";
+                    echo $author."<br>";
+                    echo $categoria[0]."<br>";
+                    ?>
                 </div>
             </div>
             <div id="socialTab">
