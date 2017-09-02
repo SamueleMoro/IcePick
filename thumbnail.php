@@ -15,7 +15,7 @@
         </a>
     </div>
     <div class="bottom-box">
-        <a href="#">
+        <a href="<?php echo get_post_permalink($allPosts[$i]->ID);?>">
             <h4><?php echo $allPosts[$i]->post_title; ?></h4>
         </a>
         <p class="date"><?php echo get_the_date("j F Y",$allPosts[$i]->ID); ?></p>
