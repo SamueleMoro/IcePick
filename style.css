@@ -1,13 +1,3 @@
-/*@font-face {
-  font-family: 'fontawesome-webfont';
-  src: url('../fonts/fontawesome-webfont.eot'); /* IE9 Compat Modes */
-  /*src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       /*url('../fonts/fontawesome-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-      /* url('../fonts/fontawesome-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-      /* url('../fonts/fontawesome-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-/*}
-*/
-
 @import url('https://fonts.googleapis.com/css?family=Questrial');
 
 * { margin:0; padding:0; font-family:'Questrial',sans-serif; }
@@ -18,11 +8,12 @@ input, select, textarea { outline:none; }
 ul, li { list-style-type:none; float:left; }
 h1 { color:#666; padding:30px 0; text-align:center; }
 
+
 /* Header */
 
-header { width:100%; height:60px; z-index:999; background:#fff; border-bottom:1px solid #e2e2e2; transition:.3s ease-in-out; -ms-transition:.3s ease-in-out; }
+header { width:100%; height:80px; z-index:999; background:#fff; border-bottom:1px solid #e2e2e2; transition:.3s ease-in-out; -ms-transition:.3s ease-in-out; }
 header:hover { border-color:#d1d1d1; }
-#menuPrincipale { width:100%; height:60px; float:left; }
+#menuPrincipale { width:100%; height:100%; float:left; }
 #menuPrincipale .container { height:100%; }
 
 #menuLeft { width:auto; height:100%; float:left; text-align:center; }
@@ -34,10 +25,11 @@ header:hover { border-color:#d1d1d1; }
 .input-group .input-group-btn .btn-default:focus { box-shadow:none; }
 
 
-#menuRight { width:auto; height:36px; float:right; margin:13px 0; }
+#menuRight { width:auto; height:36px; float:right; margin:22.5px 0; }
 .menulink { height:100%; list-style-type:none; display:inline-block; }
 .menu-link li { list-style:none; float:left; margin:0 12px; }
-.menu-link li a { display:inline-block; color:#444; font-size:14px; line-height:33px; text-transform:uppercase; }
+.menu-link li:last-child { margin-right:0; }
+.menu-link li a { display:inline-block; color:#444; font-size:12px; line-height:33px; text-transform:uppercase; }
 .menu-link li a:after { content:''; display:block; height:2px; width:0; background:transparent; transition:width .5s ease, background-color .5s ease; }
 .menu-link li a:hover:after { width:100%; background:#2196F3; }
 .menu-link li a.active,
@@ -48,9 +40,10 @@ header:hover { border-color:#d1d1d1; }
 /* Container */
 .container-fluid .page-container { padding-top:60px; }
 .container-fluid { padding:0; background:#f9f9f9; }
-#logoWeb { width:100%; height:170px; text-align:center; }
-#logoWeb a { font-size:52px; font-style:italic; color:#444; line-height:170px; transition:.3s ease-in-out; }
-#logoWeb a:hover { color:#2196F3; }
+.logo-web { width:auto; height:40px; margin-top:15px; float:left; }
+.logo-web .logo-link { width:52px; height:100%; float:left; transition:.3s ease-in-out; }
+.logo-web .logo-link img { height:100%; }
+.logo-web .logo-link:hover {  }
 
 
 /* Slider */
