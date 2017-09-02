@@ -25,8 +25,10 @@
             $content = preg_replace("/<img[^>]+\>/i", " ", $content);
             $content = apply_filters('the_content', $content);
             $content = str_replace(']]>', ']]>', $content);
-
-            $content = substr($content,0,220)."...";
+            
+            if(strlen($content) > 220) {
+                $content = substr($content,0,220)."...";
+            }
 
             echo $content;
         ?>
