@@ -11,15 +11,17 @@
             </div>
         </div>
         <a href="#">
-            <img src="<?php echo post_thumbnail($allPosts[$i]); ?>" alt="San Francisco">
+            <img src="<?php echo post_thumbnail($allPosts[$i]); ?>">
         </a>
     </div>
     <div class="bottom-box">
-        <a href="#">
+        <a href="#" class="title-thumbnail">
             <h4><?php echo $allPosts[$i]->post_title; ?></h4>
         </a>
-        <p class="date"><?php echo get_the_date("j F Y",$allPosts[$i]->ID); ?></p>
-        <p class="categ"><?php echo get_the_category($allPosts[$i]->ID)[0]->name; ?></p>
+        <div class="info-post">
+            <p class="date"><?php echo get_the_date("j F Y",$allPosts[$i]->ID); ?></p>
+            <p class="categ"><?php echo get_the_category($allPosts[$i]->ID)[0]->name; ?></p>
+        </div>
         <p><?php
             $content = $allPosts[$i]->post_content;
             $content = preg_replace("/<img[^>]+\>/i", " ", $content);
