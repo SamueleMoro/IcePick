@@ -15,7 +15,7 @@
         </a>
     </div>
     <div class="bottom-box">
-        <a href="#" class="title-thumbnail">
+        <a href="<?php echo get_post_permalink($allPosts[$i]->ID);?>">
             <h4><?php echo $allPosts[$i]->post_title; ?></h4>
         </a>
         <div class="info-post">
@@ -28,7 +28,9 @@
             $content = apply_filters('the_content', $content);
             $content = str_replace(']]>', ']]>', $content);
 
-            $content = substr($content,0,220)."...";
+            if(strlen($content) > 220) {
+                $content = substr($content,0,220)."...";
+            }
 
             echo $content;
         ?>
