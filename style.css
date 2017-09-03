@@ -11,8 +11,7 @@ h1 { color:#666; padding:30px 0; text-align:center; }
 
 /* Header */
 
-header { width:100%; height:80px; z-index:999; background:#fff; border-bottom:1px solid #e2e2e2; transition:.3s ease-in-out; -ms-transition:.3s ease-in-out; }
-header:hover { border-color:#d1d1d1; }
+header { width:100%; height:60px; z-index:999; background:#f2f2f2; transition:.3s ease-in-out; -ms-transition:.3s ease-in-out; }
 #menuPrincipale { width:100%; height:100%; float:left; }
 #menuPrincipale .container { height:100%; }
 
@@ -25,22 +24,19 @@ header:hover { border-color:#d1d1d1; }
 .input-group .input-group-btn .btn-default:focus { box-shadow:none; }
 
 
-#menuRight { width:auto; height:36px; float:right; margin:22.5px 0; }
+#menuRight { width:auto; height:30px; float:right; }
 .menulink { height:100%; list-style-type:none; display:inline-block; }
-.menu-link li { list-style:none; float:left; margin:0 12px; }
+.menu-link li { list-style:none; float:left; margin:0; }
 .menu-link li:last-child { margin-right:0; }
-.menu-link li a { display:inline-block; color:#444; font-size:12px; line-height:33px; text-transform:uppercase; }
-.menu-link li a:after { content:''; display:block; height:2px; width:0; background:transparent; transition:width .5s ease, background-color .5s ease; }
-.menu-link li a:hover:after { width:100%; background:#2196F3; }
-.menu-link li a.active,
-.menu-link li a:hover { color:#2196F3; }
-.menu-link li a.active::after { content:''; display:block; height:2px; width:100%; background:#2196f3; }
+.menu-link li a { display:inline-block; color:#666; font-size:12px; padding:0 12px; line-height:59px; border-bottom:1px solid transparent; text-transform:uppercase; }
+.menu-link li a:hover,
+.menu-link li a.active { border-color:#2196f3; color:#2196f3; }
 
 
 /* Container */
 .container-fluid .page-container { padding-top:60px; }
 .container-fluid { padding:0; background:#f9f9f9; }
-.logo-web { width:auto; height:40px; margin-top:15px; float:left; }
+.logo-web { width:auto; height:40px; margin-top:10px; float:left; }
 .logo-web .logo-link { width:52px; height:100%; float:left; transition:.3s ease-in-out; }
 .logo-web .logo-link img { height:100%; }
 .logo-web .logo-link:hover {  }
@@ -57,15 +53,16 @@ header:hover { border-color:#d1d1d1; }
 /* Post */
 .thumbnail { padding: 0 0 15px 0; border:1px solid #eee; background:#f6f6f6; margin-bottom:2em; position:relative; text-align:justify; }
 .thumbnail:hover { background:#f2f2f2; }
-.thumbnail .img-post { width:100%; height:auto; float:left; position:relative; margin-bottom:20px; }
+.thumbnail .img-post { width:100%; height:240px; float:left; overflow:hidden; position:relative; margin-bottom:20px; }
+.thumbnail .img-post .img-background { width:100%; height:100%; float:left; background-repeat:no-repeat; background-size:cover; background-position:center center; }
 .thumbnail .img-post .overlay-thumb { width:100%; height:100%; background:rgba(22,150,243,0); position:absolute; opacity:0; transition:.3s ease-in-out; }
 .thumbnail .img-post .overlay-thumb .overlay-text { display:table; width:calc(100% - 12px); height:calc(100% - 12px); margin:6px 0 0 6px; position:absolute; color:#fff; cursor:default; text-align:center; border:4px solid #1565C0; }
 .thumbnail .img-post .overlay-thumb .overlay-text .overlay-text-table { display:table-cell; vertical-align:middle; }
 .thumbnail .img-post .overlay-thumb .overlay-text .overlay-text-table .subtext { font-size:28px; }
 .thumbnail .img-post .overlay-thumb .overlay-text .overlay-text-table a { color:#1565C0; font-size:20px; margin:0 12px; }
 .thumbnail .img-post .overlay-thumb .overlay-text .overlay-text-table a:hover { color:#fff; }
-.thumbnail:hover .img-post .overlay-thumb { background:rgba(22,150,243,.8); opacity:1; }
-.thumbnail .img-post img { width:100%; height:100%; }
+.thumbnail:hover .img-post .overlay-thumb { background:rgba(22,150,243,.9); opacity:1; }
+.thumbnail .img-post img { height:100%; object-fit:fill; }
 
 .col-sm-4 .thumbnail .img-post .overlay-thumb .overlay-text .overlay-text-table .subtext { font-size:22px; margin-bottom:8px; }
 
