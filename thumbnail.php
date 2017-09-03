@@ -11,21 +11,23 @@
             </div>
         </div>
         <a href="#">
-            <img src="<?php echo post_thumbnail($allPosts[$i]); ?>" alt="San Francisco">
+            <img src="<?php echo post_thumbnail($allPosts[$i]); ?>">
         </a>
     </div>
     <div class="bottom-box">
         <a href="<?php echo get_post_permalink($allPosts[$i]->ID);?>">
             <h4><?php echo $allPosts[$i]->post_title; ?></h4>
         </a>
-        <p class="date"><?php echo get_the_date("j F Y",$allPosts[$i]->ID); ?></p>
-        <p class="categ"><a href="<?php echo esc_url(get_category_link(get_the_category($allPosts[$i]->ID)[0]->term_id)); ?>"><?php echo get_the_category($allPosts[$i]->ID)[0]->name; ?></a></p>
+        <div class="info-post">
+            <p class="date"><?php echo get_the_date("j F Y",$allPosts[$i]->ID); ?></p>
+            <p class="categ"><?php echo get_the_category($allPosts[$i]->ID)[0]->name; ?></p>
+        </div>
         <p><?php
             $content = $allPosts[$i]->post_content;
             $content = preg_replace("/<img[^>]+\>/i", " ", $content);
             $content = apply_filters('the_content', $content);
             $content = str_replace(']]>', ']]>', $content);
-            
+
             if(strlen($content) > 220) {
                 $content = substr($content,0,220)."...";
             }
