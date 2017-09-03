@@ -18,7 +18,7 @@
         </a>
         <div class="info-post">
             <p class="date"><?php echo get_the_date("j F Y",$allPosts[$i]->ID); ?></p>
-            <p class="categ"><?php echo get_the_category($allPosts[$i]->ID)[0]->name; ?></p>
+            <p class="categ"><a href="<?php echo esc_url(get_category_link(get_the_category($allPosts[$i]->ID)[0]->cat_ID)); ?>"><?php echo get_the_category($allPosts[$i]->ID)[0]->name; ?></a></p>
         </div>
         <p>
         <?php
