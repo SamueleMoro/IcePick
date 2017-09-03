@@ -10,9 +10,7 @@
                 </div>
             </div>
         </div>
-        <a href="#">
-            <img src="<?php echo post_thumbnail($allPosts[$i]); ?>">
-        </a>
+        <a href="#" class="img-background" style="background-image:url('<?php echo post_thumbnail($allPosts[$i]); ?>')"></a>
     </div>
     <div class="bottom-box">
         <a href="<?php echo get_post_permalink($allPosts[$i]->ID);?>">
