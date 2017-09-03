@@ -9,13 +9,6 @@
             <?php require_once 'inc/header.inc.php'; ?>
             <div class="container page-container">
                 <div class="row">
-                    <!--
-                    <div class="col-sm-12">
-                        <div id="logoWeb">
-                            <a href="./">Ice Pick</a>
-                        </div>
-                    </div>
-                    -->
                     <div class="col-sm-12">
                         <div id="slider">
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -58,15 +51,15 @@
                         <?php
                         $allPosts = [];
                         $nColumns = 3;
-                        
+
                         //Loading post data in the $allPosts array
                         while(have_posts()) {
                             the_post();
-                            
+
                             array_push($allPosts, $post);
                         }
                         ?>
-                        
+
                         <?php
                             //Posts in column 1
                             for($i = 0; $i < count($allPosts); $i+=$nColumns)
@@ -110,9 +103,9 @@
         ob_end_clean();
         $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
         $first_img = $matches [1] [0];
-        
+
         //Set a default image if the post doesn't have any images
-        if(empty($first_img)){ 
+        if(empty($first_img)){
             $first_img = get_template_directory_uri()."/images/default.jpg";
         }
         return $first_img;
