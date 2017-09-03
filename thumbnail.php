@@ -19,7 +19,7 @@
             <h4><?php echo $allPosts[$i]->post_title; ?></h4>
         </a>
         <p class="date"><?php echo get_the_date("j F Y",$allPosts[$i]->ID); ?></p>
-        <p class="categ"><?php echo get_the_category($allPosts[$i]->ID)[0]->name; ?></p>
+        <p class="categ"><a href="<?php echo esc_url(get_category_link(get_the_category($allPosts[$i]->ID)[0]->term_id)); ?>"><?php echo get_the_category($allPosts[$i]->ID)[0]->name; ?></a></p>
         <p><?php
             $content = $allPosts[$i]->post_content;
             $content = preg_replace("/<img[^>]+\>/i", " ", $content);
